@@ -97,6 +97,7 @@
 		F973A02E1F8CC7DE003DF7A9 /* V2EX */ = {
 			isa = PBXGroup;
 			children = (
+				F97AF9B41F984BBA00BE83BB /* BaseController */,
 				F973A02F1F8CC7DE003DF7A9 /* AppDelegate.swift */,
 				F973A0311F8CC7DE003DF7A9 /* ViewController.swift */,
 				F973A0331F8CC7DE003DF7A9 /* Main.storyboard */,
@@ -123,6 +124,13 @@
 				F973A0511F8CC7DE003DF7A9 /* Info.plist */,
 			);
 			path = V2EXUITests;
+			sourceTree = "<group>";
+		};
+		F97AF9B41F984BBA00BE83BB /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
