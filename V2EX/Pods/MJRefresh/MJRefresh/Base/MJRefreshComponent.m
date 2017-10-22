@@ -95,7 +95,7 @@
 - (void)removeObservers
 {
     [self.superview removeObserver:self forKeyPath:MJRefreshKeyPathContentOffset];
-    [self.superview removeObserver:self forKeyPath:MJRefreshKeyPathContentSize];;
+    [self.superview removeObserver:self forKeyPath:MJRefreshKeyPathContentSize];
     [self.pan removeObserver:self forKeyPath:MJRefreshKeyPathPanState];
     self.pan = nil;
 }
@@ -161,7 +161,7 @@
     }
 }
 
-- (void)beginRefreshingWithCompletionBlock:(void (^)())completionBlock
+- (void)beginRefreshingWithCompletionBlock:(void (^)(void))completionBlock
 {
     self.beginRefreshingCompletionBlock = completionBlock;
     
@@ -174,7 +174,7 @@
     self.state = MJRefreshStateIdle;
 }
 
-- (void)endRefreshingWithCompletionBlock:(void (^)())completionBlock
+- (void)endRefreshingWithCompletionBlock:(void (^)(void))completionBlock
 {
     self.endRefreshingCompletionBlock = completionBlock;
     
