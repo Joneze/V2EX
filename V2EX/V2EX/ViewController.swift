@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     var tableView:UITableView!
@@ -24,6 +25,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.view.addSubview(self.tableView)
+        
+        
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
