@@ -1,6 +1,6 @@
 //
-//  Const.swift
-//  V2EXTests
+//  File.swift
+//  V2EX
 //
 //  Created by jay on 2017/10/26.
 //  Copyright © 2017年 曾辉. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import SnapKit
 
 /// 屏幕的宽
 let DEVICE_WIDTH = UIScreen.main.bounds.size.width
@@ -30,10 +30,15 @@ let ZHHeightGap = isIphoneX ? 122 : 64 //主要用于tableview的高度 122 是�
 
 let ZHBottomOffset = isIphoneX ? 34 : 0 //底部高度差
 
+//rgb 颜色
 var UIColorFromRGB: (NSInteger) -> UIColor = {hex in
     return UIColor(red: ((CGFloat)((hex & 0xFF0000) >> 16)) / 255.0, green: ((CGFloat)((hex & 0xFF00) >> 8)) / 255.0, blue: ((CGFloat)(hex & 0xFF)) / 255.0, alpha: 1);
 }
 
+//统一颜色
 let ZHColor = UIColorFromRGB(0xec6121)
 
+var autoScaleW: (CGFloat) ->CGFloat = { hex in
+    return hex * DEVICE_WIDTH/640
+}
 

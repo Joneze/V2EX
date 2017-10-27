@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		CAB542BCAE8D02CD423E6207 /* Pods_V2EX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7A7C9835BB428728521609 /* Pods_V2EX.framework */; };
+		F95B08FE1FA1E0E900E8D16F /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95B08FF1FA1E0E900E8D16F /* SnapKit.framework */; };
+		F95B09001FA1E0F200E8D16F /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95B09011FA1E0F200E8D16F /* MJRefresh.framework */; };
+		F95B09021FA1E10300E8D16F /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95B09031FA1E10300E8D16F /* Kingfisher.framework */; };
+		F95B09041FA1E11000E8D16F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95B09051FA1E11000E8D16F /* Alamofire.framework */; };
+		F95B09061FA1E11B00E8D16F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95B09071FA1E11B00E8D16F /* SwiftyJSON.framework */; };
 		F95D53971FA1C27C00497ACA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95D53961FA1C27C00497ACA /* HomeTableViewCell.swift */; };
-		F95D53991FA1C34D00497ACA /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95D53981FA1C34D00497ACA /* Const.swift */; };
+		F95D539D1FA1D29800497ACA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95D539C1FA1D29800497ACA /* File.swift */; };
 		F973A0301F8CC7DE003DF7A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973A02F1F8CC7DE003DF7A9 /* AppDelegate.swift */; };
 		F973A0321F8CC7DE003DF7A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973A0311F8CC7DE003DF7A9 /* ViewController.swift */; };
 		F973A0351F8CC7DE003DF7A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F973A0331F8CC7DE003DF7A9 /* Main.storyboard */; };
@@ -40,8 +45,13 @@
 		7D1F0739D1A8FB9B479D89A2 /* Pods-V2EX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-V2EX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-V2EX/Pods-V2EX.debug.xcconfig"; sourceTree = "<group>"; };
 		8DC8ADCD15CC3859E8426EA1 /* Pods-V2EX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-V2EX.release.xcconfig"; path = "Pods/Target Support Files/Pods-V2EX/Pods-V2EX.release.xcconfig"; sourceTree = "<group>"; };
 		9E7A7C9835BB428728521609 /* Pods_V2EX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_V2EX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95B08FF1FA1E0E900E8D16F /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95B09011FA1E0F200E8D16F /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95B09031FA1E10300E8D16F /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95B09051FA1E11000E8D16F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95B09071FA1E11B00E8D16F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95D53961FA1C27C00497ACA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		F95D53981FA1C34D00497ACA /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		F95D539C1FA1D29800497ACA /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		F973A02C1F8CC7DE003DF7A9 /* V2EX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V2EX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F973A02F1F8CC7DE003DF7A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F973A0311F8CC7DE003DF7A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +72,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F95B09061FA1E11B00E8D16F /* SwiftyJSON.framework in Frameworks */,
+				F95B09041FA1E11000E8D16F /* Alamofire.framework in Frameworks */,
+				F95B09021FA1E10300E8D16F /* Kingfisher.framework in Frameworks */,
+				F95B09001FA1E0F200E8D16F /* MJRefresh.framework in Frameworks */,
+				F95B08FE1FA1E0E900E8D16F /* SnapKit.framework in Frameworks */,
 				CAB542BCAE8D02CD423E6207 /* Pods_V2EX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +110,11 @@
 		E9CD845B562CB1CA523948D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F95B09071FA1E11B00E8D16F /* SwiftyJSON.framework */,
+				F95B09051FA1E11000E8D16F /* Alamofire.framework */,
+				F95B09031FA1E10300E8D16F /* Kingfisher.framework */,
+				F95B09011FA1E0F200E8D16F /* MJRefresh.framework */,
+				F95B08FF1FA1E0E900E8D16F /* SnapKit.framework */,
 				9E7A7C9835BB428728521609 /* Pods_V2EX.framework */,
 			);
 			name = Frameworks;
@@ -106,6 +126,14 @@
 				F95D53961FA1C27C00497ACA /* HomeTableViewCell.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		F95D539A1FA1D22600497ACA /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F95D539C1FA1D29800497ACA /* File.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		F973A0231F8CC7DE003DF7A9 = {
@@ -133,6 +161,7 @@
 		F973A02E1F8CC7DE003DF7A9 /* V2EX */ = {
 			isa = PBXGroup;
 			children = (
+				F95D539A1FA1D22600497ACA /* Other */,
 				F95D53951FA1C26300497ACA /* Home */,
 				F97AF9B41F984BBA00BE83BB /* BaseController */,
 				F973A02F1F8CC7DE003DF7A9 /* AppDelegate.swift */,
@@ -150,7 +179,6 @@
 			children = (
 				F973A0441F8CC7DE003DF7A9 /* V2EXTests.swift */,
 				F973A0461F8CC7DE003DF7A9 /* Info.plist */,
-				F95D53981FA1C34D00497ACA /* Const.swift */,
 			);
 			path = V2EXTests;
 			sourceTree = "<group>";
@@ -373,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F95D53971FA1C27C00497ACA /* HomeTableViewCell.swift in Sources */,
+				F95D539D1FA1D29800497ACA /* File.swift in Sources */,
 				F973A0321F8CC7DE003DF7A9 /* ViewController.swift in Sources */,
 				F973A0301F8CC7DE003DF7A9 /* AppDelegate.swift in Sources */,
 			);
@@ -383,7 +412,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F973A0451F8CC7DE003DF7A9 /* V2EXTests.swift in Sources */,
-				F95D53991FA1C34D00497ACA /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

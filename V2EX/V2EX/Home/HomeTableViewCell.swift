@@ -8,7 +8,44 @@
 
 import UIKit
 
-class HomeTableViewCell: UITableViewCell {
 
+class HomeTableViewCell: UITableViewCell {
+    
+    let intX = autoScaleW(20)
+    
+    
+    lazy var titleLabel : UILabel = {
+        var label = UILabel()
+        label.font = UIFont.systemFont(ofSize: autoScaleW(28))
+        label.textColor = UIColorFromRGB(0x454545)
+        label.text = "看看效果吧"
+        return label
+    }()
+    
+    required init?(coder aDecoder:NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.setupUI()
+    }
+    
+    
+    func setupUI()  {
+        
+        self.contentView.addSubview(self.titleLabel)
+        self.setFrame()
+        
+    }
+    
+    func setFrame() {
+        self.titleLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(self.contentView).offset(intX)
+            make.top.equalTo(self.contentView).offset(intX)
+            
+        }
+    }
     
 }

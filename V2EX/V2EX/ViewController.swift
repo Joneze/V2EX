@@ -18,29 +18,43 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-    
         
-        self.tableView = UITableView(frame:self.view.bounds, style:.plain)
-        self.tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellID)
+        self.tableView = UITableView(frame:self.view.bounds, style:.grouped)
+        self.tableView.register(HomeTableViewCell.classForCoder(), forCellReuseIdentifier: cellID)
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.estimatedSectionHeaderHeight = 0
+        self.tableView.estimatedSectionFooterHeight = 0
         self.view.addSubview(self.tableView)
-        
         
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+        
+        let cell = HomeTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: cellID)
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 88
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.1
     }
     
     override func didReceiveMemoryWarning() {
