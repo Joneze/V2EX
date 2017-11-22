@@ -22,6 +22,12 @@ class HomeTableViewCell: UITableViewCell {
         return label
     }()
     
+    lazy var iconImage : UIImageView = {
+        var image = UIImageView()
+        image.backgroundColor = UIColor.red
+        return image
+    }()
+    
     required init?(coder aDecoder:NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -36,6 +42,7 @@ class HomeTableViewCell: UITableViewCell {
     func setupUI()  {
         
         self.contentView.addSubview(self.titleLabel)
+        self.contentView.addSubview(self.iconImage)
         self.setFrame()
         
     }
@@ -44,7 +51,12 @@ class HomeTableViewCell: UITableViewCell {
         self.titleLabel.snp.makeConstraints { (make) in
             make.left.equalTo(self.contentView).offset(intX)
             make.top.equalTo(self.contentView).offset(intX)
-            
+        }
+        
+        self.iconImage.snp.makeConstraints { (make) in
+            make.left.equalTo(self.contentView).offset(intX)
+            make.top.equalTo(self.titleLabel.snp.bottom).offset(intX)
+            make.size.equalTo(CGSize(width: autoScaleW(30), height: autoScaleW(30)))
         }
     }
     
