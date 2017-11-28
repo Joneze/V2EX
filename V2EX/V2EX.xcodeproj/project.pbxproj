@@ -23,6 +23,7 @@
 		F973A03A1F8CC7DE003DF7A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F973A0381F8CC7DE003DF7A9 /* LaunchScreen.storyboard */; };
 		F973A0451F8CC7DE003DF7A9 /* V2EXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973A0441F8CC7DE003DF7A9 /* V2EXTests.swift */; };
 		F973A0501F8CC7DE003DF7A9 /* V2EXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973A04F1F8CC7DE003DF7A9 /* V2EXUITests.swift */; };
+		F989E4FB1FCBFF9000A5BAC4 /* homeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F989E4FA1FCBFF9000A5BAC4 /* homeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		F973A04B1F8CC7DE003DF7A9 /* V2EXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2EXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F973A04F1F8CC7DE003DF7A9 /* V2EXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2EXUITests.swift; sourceTree = "<group>"; };
 		F973A0511F8CC7DE003DF7A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F989E4FA1FCBFF9000A5BAC4 /* homeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 		F973A02E1F8CC7DE003DF7A9 /* V2EX */ = {
 			isa = PBXGroup;
 			children = (
+				F989E4F91FCBFF5000A5BAC4 /* Model */,
 				F965A3CD1FAAFCBC0077A9AD /* Main */,
 				F95D539A1FA1D22600497ACA /* Other */,
 				F95D53951FA1C26300497ACA /* Home */,
@@ -216,6 +219,14 @@
 			children = (
 			);
 			path = BaseController;
+			sourceTree = "<group>";
+		};
+		F989E4F91FCBFF5000A5BAC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F989E4FA1FCBFF9000A5BAC4 /* homeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F989E4FB1FCBFF9000A5BAC4 /* homeModel.swift in Sources */,
 				F95D53971FA1C27C00497ACA /* HomeTableViewCell.swift in Sources */,
 				F95D539D1FA1D29800497ACA /* File.swift in Sources */,
 				F973A0321F8CC7DE003DF7A9 /* ViewController.swift in Sources */,

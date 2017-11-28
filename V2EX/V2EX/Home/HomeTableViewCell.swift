@@ -38,7 +38,6 @@ class HomeTableViewCell: UITableViewCell {
         self.setupUI()
     }
     
-    
     func setupUI()  {
         
         self.contentView.addSubview(self.titleLabel)
