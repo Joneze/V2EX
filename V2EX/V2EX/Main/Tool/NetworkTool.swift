@@ -26,8 +26,6 @@ class NetworkTool: NetworkToolProtocol {
             guard response.result.isSuccess else {
                 return
             }
-            let home = [homeModel]()
-            completionHandler(home)
             
         }
         
