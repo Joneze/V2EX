@@ -1,15 +1,14 @@
 //
-//  ViewController.swift
+//  ZHDemoTableViewController.swift
 //  V2EX
 //
-//  Created by jay on 2017/10/10.
+//  Created by jay on 2017/12/26.
 //  Copyright © 2017年 曾辉. All rights reserved.
 //
 
 import UIKit
 
-
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ZHDemoTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     var tableView:UITableView!
     var dataArray = NSMutableArray()
@@ -17,8 +16,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.view.backgroundColor = UIColor.white
-        self.title = "demo合集"
+        self.title = "tabelView合集"
         
         self.tableView = UITableView(frame:CGRect(x:0, y:0, width:DEVICE_WIDTH, height:DEVICE_HEIGHT-CGFloat(ZHBottomOffset) ), style:.grouped)
         self.tableView.register(HomeTableViewCell.classForCoder(), forCellReuseIdentifier: cellID)
@@ -27,15 +27,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.tableView.estimatedSectionHeaderHeight = 0
         self.tableView.estimatedSectionFooterHeight = 0
         self.view.addSubview(self.tableView)
-        
-        //使用网络工具类进行网络请求
-        NetworkTool.loadHomeDataFromServer{ (backPram) in
-            
-            print(backPram)
-        }
-        
     }
 
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -45,7 +39,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+        //        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         
         let cell = HomeTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: cellID)
         return cell
@@ -65,18 +59,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            let tableViewOne = ZHDemoTableViewController()
-            self.navigationController?.pushViewController(tableViewOne, animated: true)
-            
-        }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 
 }
-

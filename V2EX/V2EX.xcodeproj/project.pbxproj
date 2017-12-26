@@ -16,6 +16,7 @@
 		F95D53971FA1C27C00497ACA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95D53961FA1C27C00497ACA /* HomeTableViewCell.swift */; };
 		F95D539D1FA1D29800497ACA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95D539C1FA1D29800497ACA /* File.swift */; };
 		F965A3D21FAAFE820077A9AD /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F965A3D11FAAFE820077A9AD /* NetworkTool.swift */; };
+		F96AD15A1FF252A000DF2FC9 /* ZHDemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96AD1591FF252A000DF2FC9 /* ZHDemoTableViewController.swift */; };
 		F973A0301F8CC7DE003DF7A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973A02F1F8CC7DE003DF7A9 /* AppDelegate.swift */; };
 		F973A0321F8CC7DE003DF7A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973A0311F8CC7DE003DF7A9 /* ViewController.swift */; };
 		F973A0351F8CC7DE003DF7A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F973A0331F8CC7DE003DF7A9 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		F95D53961FA1C27C00497ACA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		F95D539C1FA1D29800497ACA /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		F965A3D11FAAFE820077A9AD /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
+		F96AD1591FF252A000DF2FC9 /* ZHDemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHDemoTableViewController.swift; sourceTree = "<group>"; };
 		F973A02C1F8CC7DE003DF7A9 /* V2EX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V2EX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F973A02F1F8CC7DE003DF7A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F973A0311F8CC7DE003DF7A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,7 +129,9 @@
 		F95D53951FA1C26300497ACA /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F95D53961FA1C27C00497ACA /* HomeTableViewCell.swift */,
+				F96AD1571FF24F0600DF2FC9 /* Model */,
+				F96AD1581FF24F0600DF2FC9 /* View */,
+				F96AD1561FF24EFE00DF2FC9 /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -154,6 +158,28 @@
 				F965A3D11FAAFE820077A9AD /* NetworkTool.swift */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		F96AD1561FF24EFE00DF2FC9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F96AD1591FF252A000DF2FC9 /* ZHDemoTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F96AD1571FF24F0600DF2FC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F96AD1581FF24F0600DF2FC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F973A0231F8CC7DE003DF7A9 = {
@@ -188,6 +214,7 @@
 				F97AF9B41F984BBA00BE83BB /* BaseController */,
 				F973A02F1F8CC7DE003DF7A9 /* AppDelegate.swift */,
 				F973A0311F8CC7DE003DF7A9 /* ViewController.swift */,
+				F95D53961FA1C27C00497ACA /* HomeTableViewCell.swift */,
 				F973A0331F8CC7DE003DF7A9 /* Main.storyboard */,
 				F973A0361F8CC7DE003DF7A9 /* Assets.xcassets */,
 				F973A0381F8CC7DE003DF7A9 /* LaunchScreen.storyboard */,
@@ -431,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F989E4FB1FCBFF9000A5BAC4 /* homeModel.swift in Sources */,
+				F96AD15A1FF252A000DF2FC9 /* ZHDemoTableViewController.swift in Sources */,
 				F95D53971FA1C27C00497ACA /* HomeTableViewCell.swift in Sources */,
 				F95D539D1FA1D29800497ACA /* File.swift in Sources */,
 				F973A0321F8CC7DE003DF7A9 /* ViewController.swift in Sources */,
