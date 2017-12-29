@@ -15,6 +15,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var dataArray = NSMutableArray()
     let cellID = "testCellID"
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
@@ -41,13 +43,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return cellTitleArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         
         let cell = HomeTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: cellID)
+        cell.titleLabel.text = cellTitleArr[indexPath.row]
         return cell
         
     }
@@ -65,6 +68,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false) //松手后 颜色消失
+        
         if indexPath.row == 0 {
             let tableViewOne = ZHDemoTableViewController()
             self.navigationController?.pushViewController(tableViewOne, animated: true)
@@ -78,5 +83,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
 
 
+    var cellTitleArr = ["tableView的一些效果合集","暂定","暂定","暂定","暂定","暂定"]
+    
 }
 
