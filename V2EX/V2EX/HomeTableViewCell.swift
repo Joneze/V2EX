@@ -18,7 +18,7 @@ class HomeTableViewCell: UITableViewCell {
         var label = UILabel()
         label.font = UIFont.systemFont(ofSize: autoScaleW(28))
         label.textColor = UIColorFromRGB(0x454545)
-        label.text = "看看效果吧"
+        label.text = "测试效果"
         return label
     }()
     

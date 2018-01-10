@@ -18,7 +18,7 @@ class ZHDemoTableViewController: UIViewController,UITableViewDelegate,UITableVie
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.white
-        self.title = "tabelView合集"
+        self.title = "tabelView 合集"
         
         self.tableView = UITableView(frame:CGRect(x:0, y:0, width:DEVICE_WIDTH, height:DEVICE_HEIGHT-CGFloat(ZHBottomOffset) ), style:.grouped)
         self.tableView.register(HomeTableViewCell.classForCoder(), forCellReuseIdentifier: cellID)
