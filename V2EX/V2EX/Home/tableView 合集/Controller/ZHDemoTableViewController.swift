@@ -35,13 +35,14 @@ class ZHDemoTableViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return cellTitleArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         
         let cell = HomeTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: cellID)
+        cell.titleLabel.text = cellTitleArr[indexPath.row];
         return cell
         
     }
@@ -59,8 +60,8 @@ class ZHDemoTableViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: false) //松手后 颜色消失
     }
 
-
+    var cellTitleArr = ["下拉放大效果","暂定","暂定","暂定","暂定","暂定"]
 }
