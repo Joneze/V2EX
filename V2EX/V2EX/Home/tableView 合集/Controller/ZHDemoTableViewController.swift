@@ -61,6 +61,12 @@ class ZHDemoTableViewController: UIViewController,UITableViewDelegate,UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false) //松手后 颜色消失
+        
+        if indexPath.row == 0 {
+            let tableViewOne = ZHSpringHeaderViewController()
+            self.navigationController?.pushViewController(tableViewOne, animated: true)
+            
+        }
     }
 
     var cellTitleArr = ["下拉放大效果","暂定","暂定","暂定","暂定","暂定"]
