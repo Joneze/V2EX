@@ -4,7 +4,7 @@
 //
 //  Created by jay on 2018/1/12.
 //  Copyright © 2018年 曾辉. All rights reserved.
-//
+//  个人中心头部拉伸效果
 
 import UIKit
 
@@ -13,6 +13,14 @@ class ZHSpringHeaderViewController: UIViewController,UITableViewDelegate,UITable
     var tableView:UITableView!
     var dataArray = NSMutableArray()
     let cellID = "springCell"
+    
+    lazy var headerViewImage: UIImageView = {
+        
+        let imageView = UIImageView(frame:(CGRect(x:0, y:-200, width:DEVICE_WIDTH, height:200)))
+        imageView.image = UIImage(named:"headerImage")
+        return imageView
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +34,9 @@ class ZHSpringHeaderViewController: UIViewController,UITableViewDelegate,UITable
         self.tableView.dataSource = self
         self.tableView.estimatedSectionHeaderHeight = 0
         self.tableView.estimatedSectionFooterHeight = 0
+        self.tableView.contentInset = UIEdgeInsetsMake(200, 0, 0, 0);
         self.view.addSubview(self.tableView)
-        
+        self.tableView.addSubview(self.headerViewImage)
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,7 +61,7 @@ class ZHSpringHeaderViewController: UIViewController,UITableViewDelegate,UITable
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+        return 0.01
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
