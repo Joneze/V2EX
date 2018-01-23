@@ -98,7 +98,11 @@ class ZHSpringHeaderViewController: UIViewController,UITableViewDelegate,UITable
         
         // 6、设置导航栏阴影图片
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        
+//        self.automaticallyAdjustsScrollViewInsets =
     }
+    
     
     /**
      *  还原导航栏  viewWillDisAppear调用
