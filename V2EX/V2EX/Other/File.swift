@@ -39,6 +39,6 @@ var UIColorFromRGB: (NSInteger) -> UIColor = {hex in
 let ZHColor = UIColorFromRGB(0xec6121)
 
 var autoScaleW: (CGFloat) ->CGFloat = { hex in
-    return hex * DEVICE_WIDTH/640
+    return hex * DEVICE_WIDTH/750
 }
 

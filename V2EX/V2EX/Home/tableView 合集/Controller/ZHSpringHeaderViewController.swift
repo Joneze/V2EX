@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZHSpringHeaderViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ZHSpringHeaderViewController: UIViewController,UITableViewDelegate,UITableViewDataSource ,UIScrollViewDelegate{
 
     var tableView:UITableView!
     var dataArray = NSMutableArray()
@@ -16,7 +16,7 @@ class ZHSpringHeaderViewController: UIViewController,UITableViewDelegate,UITable
     
     lazy var headerViewImage: UIImageView = {
         
-        let imageView = UIImageView(frame:(CGRect(x:0, y:-200, width:DEVICE_WIDTH, height:200)))
+        let imageView = UIImageView(frame:(CGRect(x:0, y:-autoScaleW(400), width:DEVICE_WIDTH, height:autoScaleW(400))))
         imageView.image = UIImage(named:"headerImage")
         return imageView
     }()
@@ -28,15 +28,31 @@ class ZHSpringHeaderViewController: UIViewController,UITableViewDelegate,UITable
         self.view.backgroundColor = UIColor.white
         self.title = "个人中心拉伸效果"
         
-        self.tableView = UITableView(frame:CGRect(x:0, y:0, width:DEVICE_WIDTH, height:DEVICE_HEIGHT-CGFloat(ZHBottomOffset) ), style:.grouped)
+        self.tableView = UITableView(frame:CGRect(x:0, y:-64, width:DEVICE_WIDTH, height:DEVICE_HEIGHT-CGFloat(ZHBottomOffset) + 64), style:.grouped)
         self.tableView.register(HomeTableViewCell.classForCoder(), forCellReuseIdentifier: cellID)
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.estimatedSectionHeaderHeight = 0
         self.tableView.estimatedSectionFooterHeight = 0
-        self.tableView.contentInset = UIEdgeInsetsMake(200, 0, 0, 0);
+        self.tableView.contentInset = UIEdgeInsetsMake(autoScaleW(400), 0, 0, 0);
         self.view.addSubview(self.tableView)
         self.tableView.addSubview(self.headerViewImage)
+    }
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let point = scrollView.contentOffset;
+        print(point)
+        if (point.y + 64 < -autoScaleW(400)) {
+            var rect = self.headerViewImage.frame;
+            rect.origin.y = point.y + 64;
+            rect.origin.x = (point.y + autoScaleW(528))*DEVICE_WIDTH/autoScaleW(528)/2
+            rect.size.height = -point.y - 64;
+            rect.size.width = -DEVICE_WIDTH *  point.y / autoScaleW(528)
+            self.headerViewImage.frame = rect;
+        }
+        
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -72,7 +88,7 @@ class ZHSpringHeaderViewController: UIViewController,UITableViewDelegate,UITable
         tableView.deselectRow(at: indexPath, animated: false) //松手后 颜色消失
     }
     
-    var cellTitleArr = ["暂定","暂定","暂定","暂定","暂定","暂定"]
+    var cellTitleArr = ["下拉试试看效果哈","导航是透明的哦","状态栏的颜色没改，因为懒","是不是很好玩啊？","动动手指点个赞吧","未完待续"]
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -102,6 +118,8 @@ class ZHSpringHeaderViewController: UIViewController,UITableViewDelegate,UITable
         
 //        self.automaticallyAdjustsScrollViewInsets =
     }
+    
+    
     
     
     /**

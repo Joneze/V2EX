@@ -29,7 +29,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.tableView.estimatedSectionHeaderHeight = 0
         self.tableView.estimatedSectionFooterHeight = 0
         self.view.addSubview(self.tableView)
-        
         //使用网络工具类进行网络请求
         NetworkTool.loadHomeDataFromServer{ (backPram) in
             
