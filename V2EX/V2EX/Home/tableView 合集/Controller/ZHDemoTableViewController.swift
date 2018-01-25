@@ -69,5 +69,5 @@ class ZHDemoTableViewController: UIViewController,UITableViewDelegate,UITableVie
         }
     }
 
-    var cellTitleArr = ["下拉放大效果","暂定","暂定","暂定","暂定","暂定"]
+    var cellTitleArr = ["tableView头部下拉放大效果","暂定","暂定","暂定","暂定","暂定"]
 }

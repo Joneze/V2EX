@@ -88,7 +88,7 @@ class ZHSpringHeaderViewController: UIViewController,UITableViewDelegate,UITable
         tableView.deselectRow(at: indexPath, animated: false) //松手后 颜色消失
     }
     
-    var cellTitleArr = ["下拉试试看效果哈","导航是透明的哦","状态栏的颜色没改，因为懒","是不是很好玩啊？","动动手指点个赞吧","未完待续"]
+    var cellTitleArr = ["下拉试试看效果哈","导航是透明的哦","状态栏的颜色没改，因为懒","是不是很好玩啊？","动动手指点个赞吧","一般应用于个人中心"]
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
